@@ -1,13 +1,23 @@
-from kivy.app import App
-from kivy.uix.widget import Widget
+from tkinter import *
 
+root = Tk()
+root.title("Welcome to GeekForGeeks")
+root.geometry('350x200')
 
-class LoginScreen(Widget):
-    pass
+lbl = Label(root, text = "Are you a Geek?")
+lbl.grid()
 
-class FinanseeApp(App):
-    def build(self):
-        return LoginScreen()
+# function to display text when
+# button is clicked
+def clicked():
+    lbl.configure(text = "I just got clicked")
 
-if __name__ == '__main__':
-    FinanseeApp().run()
+# button widget with red color text
+# inside
+btn = Button(root, text = "Click me" ,
+             fg = "red", command=clicked)
+# set Button grid
+btn.grid(column=1, row=1)
+
+# Execute Tkinter
+root.mainloop()
