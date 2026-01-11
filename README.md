@@ -16,4 +16,7 @@ Inciado por:
 
 - TKInter (Interface Gráfica)
 - SQL LITE
+
+# Software usage
+
 - BRModelo 
