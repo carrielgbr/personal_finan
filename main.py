@@ -1,23 +1,24 @@
 from tkinter import *
+from tkinter import ttk
 
-root = Tk()
-root.title("Welcome to GeekForGeeks")
-root.geometry('1800x900')
+class App:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("Simple Tkinter App")
 
-lbl = Label(root, text = "Are you a Geek?")
-lbl.grid()
+        self.label = Label(root, text="Hello, Tkinter!")
+        self.label.pack(pady=10)
 
-# function to display text when
-# button is clicked
-def clicked():
-    lbl.pack(text = "I just got clicked")
-    lbl.pack(expand=True, fill='both')
-# button widget with red color text
-# inside
-btn = Button(root, text = "Click me" ,
-             fg = "red", command=clicked)
-# set Button grid
-btn.grid(column=700, row=500)
+        self.button = Button(root, text="Click Me", command=self.on_button_click)
+        self.button.pack(pady=10)
 
-# Execute Tkinter
-root.mainloop()
+    def on_button_click(self):
+        self.label.config(text="Button Clicked!")
+
+    def tela(self):
+        self.root.configure(background='lightblue')
+
+if __name__ == "__main__":
+    root = Tk()
+    app = App(root)
+    root.mainloop()
