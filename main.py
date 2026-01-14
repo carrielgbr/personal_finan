@@ -6,7 +6,8 @@ class App:
         self.root = root
         self.root.title("FinanSee - Main")
         self.root.iconbitmap(default='images\pngwing.com.ico')## Image ico
-        root.geometry("500x500+10+50") 
+        root.geometry("500x500")
+        root.wm_minsize(width=500, height=500) 
         
         self.label = Label(root, text="FinanSee !").place(x=200, y=50)
 
