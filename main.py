@@ -5,11 +5,10 @@ class App:
     def __init__(self, root):
         self.root = root
         self.root.title("FinanSee - Main")
+        self.root.iconbitmap(default='images\pngwing.com.ico')## Image ico
         root.geometry("500x500+10+50") 
         
-        self.label = Label(root, text="FinanSee !")
-        self.label.pack(pady=10)
-        self.label.config(font=("Arial", 24))
+        self.label = Label(root, text="FinanSee !").place(x=200, y=50)
 
         self.button = Button(root, text="Inciar", command=self.on_button_click)
         self.button.pack(pady=10)
