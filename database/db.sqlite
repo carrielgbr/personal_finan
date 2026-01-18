@@ -1,0 +1,8 @@
+create database finansee_db;
+use finansee_db;
+
+create table user_admin{
+    psswrd_admin varchar (255);
+    user_admin varchar (255);
+}
+
