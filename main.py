@@ -8,7 +8,14 @@ class App:
         self.root = root
         self.root.title("FinanSee - Main")
         self.root.iconbitmap(default='images\pngwing.com.ico')## Image ico
-        self.label = Label(root, text="FinanSee !", width=20, height=2, font=("Arial", 16),bg="#00FF7F", fg="black").place(x=200, y=10)
+        self.label = Label(root, text="FinanSee !", width=30, height=2, font=("Arial", 16),bg="#00FF7F", fg="black")
+        
+        self.login = Entry(root, width=30, font=("Arial", 14))
+        self.login.pack(pady=20)
+
+        self.password = Entry(root, width=30, font=("Arial", 14), show="*")
+        self.password.pack(pady=20)
+
         self.button1 = Button(root, text="Inciar", command=self.on_button_click, width=20, height=2, bg="#4CAF50", fg="white")
         self.button1.pack(side=TOP, pady=50)
 
